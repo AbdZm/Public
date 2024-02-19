@@ -1,0 +1,10 @@
+C:\Users\ABD\source\repos\CalcOOPApp\bin\Debug\CalcOOPApp.exe.config
+C:\Users\ABD\source\repos\CalcOOPApp\bin\Debug\CalcOOPApp.exe
+C:\Users\ABD\source\repos\CalcOOPApp\bin\Debug\CalcOOPApp.pdb
+C:\Users\ABD\source\repos\CalcOOPApp\obj\Debug\CalcOOPApp.csprojAssemblyReference.cache
+C:\Users\ABD\source\repos\CalcOOPApp\obj\Debug\CalcOOPApp.Form1.resources
+C:\Users\ABD\source\repos\CalcOOPApp\obj\Debug\CalcOOPApp.Properties.Resources.resources
+C:\Users\ABD\source\repos\CalcOOPApp\obj\Debug\CalcOOPApp.csproj.GenerateResource.cache
+C:\Users\ABD\source\repos\CalcOOPApp\obj\Debug\CalcOOPApp.csproj.CoreCompileInputs.cache
+C:\Users\ABD\source\repos\CalcOOPApp\obj\Debug\CalcOOPApp.exe
+C:\Users\ABD\source\repos\CalcOOPApp\obj\Debug\CalcOOPApp.pdb
