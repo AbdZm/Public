@@ -1,0 +1,13 @@
+C:\Users\ABD\source\repos\LibProject\bin\Debug\netcoreapp3.1\LibProject.exe
+C:\Users\ABD\source\repos\LibProject\bin\Debug\netcoreapp3.1\LibProject.deps.json
+C:\Users\ABD\source\repos\LibProject\bin\Debug\netcoreapp3.1\LibProject.runtimeconfig.json
+C:\Users\ABD\source\repos\LibProject\bin\Debug\netcoreapp3.1\LibProject.runtimeconfig.dev.json
+C:\Users\ABD\source\repos\LibProject\bin\Debug\netcoreapp3.1\LibProject.dll
+C:\Users\ABD\source\repos\LibProject\bin\Debug\netcoreapp3.1\LibProject.pdb
+C:\Users\ABD\source\repos\LibProject\obj\Debug\netcoreapp3.1\LibProject.csprojAssemblyReference.cache
+C:\Users\ABD\source\repos\LibProject\obj\Debug\netcoreapp3.1\LibProject.AssemblyInfoInputs.cache
+C:\Users\ABD\source\repos\LibProject\obj\Debug\netcoreapp3.1\LibProject.AssemblyInfo.cs
+C:\Users\ABD\source\repos\LibProject\obj\Debug\netcoreapp3.1\LibProject.csproj.CoreCompileInputs.cache
+C:\Users\ABD\source\repos\LibProject\obj\Debug\netcoreapp3.1\LibProject.dll
+C:\Users\ABD\source\repos\LibProject\obj\Debug\netcoreapp3.1\LibProject.pdb
+C:\Users\ABD\source\repos\LibProject\obj\Debug\netcoreapp3.1\LibProject.genruntimeconfig.cache
