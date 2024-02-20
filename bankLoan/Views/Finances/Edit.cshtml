@@ -1,0 +1,143 @@
+﻿@model FinalProjectUni.Models.Finance
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+    <h1>Edit</h1>
+
+    <h4>Loan</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="MyUserId" class="control-label">Client Id</label>
+                    <input asp-for="MyUserId" class="form-control" asp-items="ViewBag.MyUserId" readonly />
+                    @*<span asp-validation-for="MyUserId" class="text-danger"></span>*@
+                </div>
+                <div class="form-group">
+                    <label asp-for="SecretKey" class="control-label">Secret Key</label>
+                    <input asp-for="SecretKey" class="form-control" readonly />
+                    <span asp-validation-for="SecretKey" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Type" class="control-label"></label>
+                    <input asp-for="Type" class="form-control" readonly />
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Gender" class="control-label"></label>
+                    <input asp-for="Gender" class="form-control" readonly />
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Age" class="control-label"></label>
+                    <input asp-for="Age" class="form-control" readonly />
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Married" class="control-label"></label>
+                    <input asp-for="Married" class="form-control" readonly />
+                    <span asp-validation-for="Married" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Dependents" class="control-label"></label>
+                    <input asp-for="Dependents" class="form-control" />
+                    <span asp-validation-for="Dependents" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Education" class="control-label"></label>
+                    <input asp-for="Education" class="form-control" readonly />
+                    <span asp-validation-for="Education" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SelfEmployed" class="control-label">Self Employed</label>
+                    <input asp-for="SelfEmployed" class="form-control" readonly />
+                    <span asp-validation-for="SelfEmployed" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ApplicantIncome" class="control-label">Applicant Income</label>
+                    <input asp-for="ApplicantIncome" class="form-control" />
+                    <span asp-validation-for="ApplicantIncome" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IncomeContinuation" class="control-label">Income Continuation</label>
+                    <input asp-for="IncomeContinuation" class="form-control" readonly />
+                    <span asp-validation-for="IncomeContinuation" class="text-danger"></span>
+                </div>
+                @*<div class="form-group">
+            <label asp-for="IncomeRate" class="control-label"></label>
+            <input asp-for="IncomeRate" class="form-control" readonly/>
+            <span asp-validation-for="IncomeRate" class="text-danger"></span>
+        </div>*@
+                <div class="form-group">
+                    <label asp-for="IncomeRisk" class="control-label">Income Risk</label>
+                    <input asp-for="IncomeRisk" class="form-control" readonly />
+                    <span asp-validation-for="IncomeRisk" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CoapplicantIncome" class="control-label">Coapplicant Income</label>
+                    <input asp-for="CoapplicantIncome" class="form-control" />
+                    <span asp-validation-for="CoapplicantIncome" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FinanceAmount" class="control-label">Loan Amount</label>
+                    <input asp-for="FinanceAmount" class="form-control" readonly />
+                    <span asp-validation-for="FinanceAmount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FinanceAmountTerm" class="control-label">Loan Amount Term</label>
+                    <input asp-for="FinanceAmountTerm" class="form-control" readonly />
+                    <span asp-validation-for="FinanceAmountTerm" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Credit_History" class="control-label">Credit History</label>
+
+                    @*<span asp-validation-for="Credit_History" class="text-danger"></span>*@
+                </div>
+                <div>
+                    <select asp-for="Credit_History" class="form-control">
+                        <option value="1">Good</option>
+                        <option value="0">Bad</option>
+                    </select>
+                </div>
+                </br>
+                </br>
+                <div class="form-group">
+                    <label asp-for="Loan_Status" class="control-label">Loan Status</label>
+                    <input asp-for="Loan_Status" class="form-control" readonly />
+                    <span asp-validation-for="Loan_Status" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ReleaseDate" class="control-label">Request Date</label>
+                    <input asp-for="ReleaseDate" class="form-control" readonly />
+                    <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Done" /> @*@Html.DisplayNameFor(model => model.Done)*@Processed
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="final_decision" /> @*@Html.DisplayNameFor(model => model.final_decision)*@Approval
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

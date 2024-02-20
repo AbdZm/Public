@@ -1,0 +1,229 @@
+﻿@model IEnumerable<FinalProjectUni.Models.MarketDashB>
+@inject FinalProjectUni.Controllers.FinancesController aService
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Market Dashboard</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                <section>
+                    <p style="color:red; font-size:larger;">Personal</p>
+                    <p style="color:blue; font-size:larger;">Business</p>
+                    <p style="color:orange; font-size:larger;">Education</p>
+                </section>
+                <div class="align-content-xxl-center">
+                    <div id="pie1"></div>
+                </div>
+            </th>
+            <th>
+                <section>
+                    <p style="color:green; font-size:larger;">Approved</p>
+                    <p style="color:red; font-size:larger;">Not Approved</p>
+                </section>
+                <div class="align-content-xxl-center">
+                    <div id="pie2"></div>
+                </div>
+            </th>
+            <th>
+                <section>
+                    <p style="color:green; font-size:larger;">Processed</p>
+                    <p style="color:orangered; font-size:larger;">Not Processed</p>
+                </section>
+                <div class="align-content-xxl-center">
+                    <div id="pie3"></div>
+                </div>
+            </th>
+        </tr>
+    </thead>
+</table>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+       
+        
+    
+
+
+
+    @section scripts{
+        <script>
+        const a = @aService.Count1();
+        const b = @aService.Count2();
+        const c = @aService.Count3();
+        const t = @aService.Count4();
+        const f = @aService.Count5();
+        const d = @aService.Count6();
+        const ny = @aService.Count7();
+        const sum = a + b + c;
+        const sumA = f + t;
+        const sumD = d + ny;
+        let red = (a / sum) * 100;
+        let orange = (b / sum) * 100;
+        let blue = (c / sum) * 100;
+        let green = (t / sumA) * 100;
+        let redA = (f / sumA) * 100;
+        let done = (d / sumD) * 100;
+        let nyp = (ny / sumD) * 100;
+        $(function () {
+            $('#pie1').rotapie({
+                slices: [
+                    { color: 'red', percentage: red }, // If color not set, slice will be transparant.
+                    { color: 'orange', percentage: orange }, // Font color to render percentage defaults to 'color' but can be overriden by setting 'fontColor'.
+                    { color: 'blue', percentage: blue }
+                ],
+                sliceIndex: 0, // Start index selected slice.
+                deltaAngle: 0.1, // The rotation angle in radians between frames, smaller number equals slower animation.
+                minRadius: 100, // Radius of unselected slices, can be set to percentage of container width i.e. '50%'
+                maxRadius: 110, // Radius of selected slice, can be set to percentage of container width i.e. '45%'
+                minInnerRadius: 55, // Smallest radius inner circle when animated, set to 0 to disable inner circle, can be set to percentage of container width i.e. '35%'
+                maxInnerRadius: 65, // Normal radius inner circle, set to 0 to disable inner circle, can be set to percentage of container width i.e. '30%'
+                innerColor: '#fff', // Background color inner circle.
+                minFontSize: 30, // Smallest fontsize percentage when animated, set to 0 to disable percentage display, can be set to percentage of container width i.e. '20%'
+                maxFontSize: 40, // Normal fontsize percentage, set to 0 to disable percentage display, can be set to percentage of container width i.e. '10%'
+                fontYOffset: 0, // Vertically offset the percentage display with this value, can be set to percentage of container width i.e. '-10%'
+                fontFamily: 'Times New Roman', // FontFamily percentage display.
+                fontWeight: 'bold', // FontWeight percentage display.
+                decimalPoint: '.', // Can be set to comma or other symbol.
+                clickable: true // If set to true a user can select a different slice by clicking on it.
+                /*
+                beforeAnimate: function (nextIndex, settings) {
+                    var canvas = this;
+                    return false; // Cancel rotation
+                },
+                afterAnimate: function(settings){
+                    var canvas = this;
+                    var index = settings.sliceIndex; // Retrieve current index.
+                }
+                */
+            });
+        });
+
+        $(function () {
+            $('#pie2').rotapie({
+                slices: [
+                    { color: 'red', percentage: redA }, // If color not set, slice will be transparant.
+                    { color: 'green', percentage: green }, // Font color to render percentage defaults to 'color' but can be overriden by setting 'fontColor'.
+
+                ],
+                sliceIndex: 0, // Start index selected slice.
+                deltaAngle: 0.1, // The rotation angle in radians between frames, smaller number equals slower animation.
+                minRadius: 100, // Radius of unselected slices, can be set to percentage of container width i.e. '50%'
+                maxRadius: 110, // Radius of selected slice, can be set to percentage of container width i.e. '45%'
+                minInnerRadius: 55, // Smallest radius inner circle when animated, set to 0 to disable inner circle, can be set to percentage of container width i.e. '35%'
+                maxInnerRadius: 65, // Normal radius inner circle, set to 0 to disable inner circle, can be set to percentage of container width i.e. '30%'
+                innerColor: '#fff', // Background color inner circle.
+                minFontSize: 30, // Smallest fontsize percentage when animated, set to 0 to disable percentage display, can be set to percentage of container width i.e. '20%'
+                maxFontSize: 40, // Normal fontsize percentage, set to 0 to disable percentage display, can be set to percentage of container width i.e. '10%'
+                fontYOffset: 0, // Vertically offset the percentage display with this value, can be set to percentage of container width i.e. '-10%'
+                fontFamily: 'Times New Roman', // FontFamily percentage display.
+                fontWeight: 'bold', // FontWeight percentage display.
+                decimalPoint: '.', // Can be set to comma or other symbol.
+                clickable: true // If set to true a user can select a different slice by clicking on it.
+                /*
+                beforeAnimate: function (nextIndex, settings) {
+                    var canvas = this;
+                    return false; // Cancel rotation
+                },
+                afterAnimate: function(settings){
+                    var canvas = this;
+                    var index = settings.sliceIndex; // Retrieve current index.
+                }
+                */
+            });
+        });
+
+
+
+
+            $(function () {
+                $('#pie3').rotapie({
+                    slices: [
+                        { color: 'green', percentage: done }, // If color not set, slice will be transparant.
+                        { color: 'orangered', percentage: nyp }, // Font color to render percentage defaults to 'color' but can be overriden by setting 'fontColor'.
+
+                    ],
+                    sliceIndex: 0, // Start index selected slice.
+                    deltaAngle: 0.1, // The rotation angle in radians between frames, smaller number equals slower animation.
+                    minRadius: 100, // Radius of unselected slices, can be set to percentage of container width i.e. '50%'
+                    maxRadius: 110, // Radius of selected slice, can be set to percentage of container width i.e. '45%'
+                    minInnerRadius: 55, // Smallest radius inner circle when animated, set to 0 to disable inner circle, can be set to percentage of container width i.e. '35%'
+                    maxInnerRadius: 65, // Normal radius inner circle, set to 0 to disable inner circle, can be set to percentage of container width i.e. '30%'
+                    innerColor: '#fff', // Background color inner circle.
+                    minFontSize: 30, // Smallest fontsize percentage when animated, set to 0 to disable percentage display, can be set to percentage of container width i.e. '20%'
+                    maxFontSize: 40, // Normal fontsize percentage, set to 0 to disable percentage display, can be set to percentage of container width i.e. '10%'
+                    fontYOffset: 0, // Vertically offset the percentage display with this value, can be set to percentage of container width i.e. '-10%'
+                    fontFamily: 'Times New Roman', // FontFamily percentage display.
+                    fontWeight: 'bold', // FontWeight percentage display.
+                    decimalPoint: '.', // Can be set to comma or other symbol.
+                    clickable: true // If set to true a user can select a different slice by clicking on it.
+                    /*
+                    beforeAnimate: function (nextIndex, settings) {
+                        var canvas = this;
+                        return false; // Cancel rotation
+                    },
+                    afterAnimate: function(settings){
+                        var canvas = this;
+                        var index = settings.sliceIndex; // Retrieve current index.
+                    }
+                    */
+                });
+            });
+        
+
+        </script>
+    }

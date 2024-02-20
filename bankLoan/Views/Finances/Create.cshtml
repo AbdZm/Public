@@ -1,0 +1,235 @@
+﻿@model FinalProjectUni.Models.Finance
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+    <!-- Breadcrumb -->
+    <!--<div class="banner-section position-relative">-->
+        <!-- Container -->
+        <!--<div class="container">-->
+            <!-- row -->
+            <!--<div class="row">-->
+                <!-- col  -->
+                <!--<div class="col-md-6">
+                    <div class="banner-content banner-padding">
+                        <h3 class="title">LOANS</h3>
+                        <p>You are always welcome to serve us You are always welcome to serve us You are always welcome to serve us You are always welcome to serve us You are always welcome to serve us You are always welcome to serve us You are always welcome to serve us You are always welcome to serve us </p>
+                    </div>
+                </div>-->
+                <!-- /col -->
+                <!-- col -->
+                <!--<div class="col-md-6 mt-7 mt-md-0">
+                    <div class="banner-content scene banner-img">
+                        <div data-depth="0.2">
+                            <img src="~/images/bg/Loans-1.png" alt="img" style="width:650px; border-radius:2cm;"/>
+                        </div>
+                    </div>
+                </div>-->
+                <!-- /col -->
+            <!--</div>-->
+            <!-- /row -->
+        <!--</div>-->
+        <!-- /Container -->
+    <!--</div>-->
+    <!-- /Breadcrumb -->
+    <!-- Loan Form -->
+<div style="margin-top:-150px;">
+    <div class="loan-form-area pt-100 pb-100" style="padding-top:-555px;">
+        <!-- Container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row justify-content-center text-center">
+                <!-- col -->
+                <div class="col-lg-8 col-md-12 mb-50">
+                    <div class="section-title">
+                        <h2 class="title">Apply for a loan</h2>
+                        <div class="title-bdr">
+                            <div class="left-bdr"></div>
+                            <div class="right-bdr"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /col -->
+            </div>
+            <!-- /row -->
+
+            <div class="loan-form">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <!--row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="SecretKey" class="control-label">Secret Key</label>
+                                <input asp-for="SecretKey" class="form-control" />
+                                <span asp-validation-for="SecretKey" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Type" class="control-label"></label>
+                                @Html.DropDownListFor(m => m.Type,
+                                new SelectList(Enum.GetValues(typeof(Types))))
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Gender" class="control-label"></label>
+                                @Html.DropDownListFor(m => m.Gender,
+                                new SelectList(Enum.GetValues(typeof(Gender))))
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Age" class="control-label"></label>
+                                @Html.DropDownListFor(m => m.Age,
+                                new SelectList(Enum.GetValues(typeof(Age))))
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Married" class="control-label"></label>
+                                @Html.DropDownListFor(m => m.Married,
+                                new SelectList(Enum.GetValues(typeof(YN))))
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Dependents" class="control-label"></label>
+                                <input asp-for="Dependents" class="form-control" value="0"/>
+                                <span asp-validation-for="Dependents" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Education" class="control-label"></label>
+                                @Html.DropDownListFor(m => m.Education,
+                                 new SelectList(Enum.GetValues(typeof(Education))))
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="SelfEmployed" class="control-label">Self Employed</label>
+                                @Html.DropDownListFor(m => m.SelfEmployed,
+                                new SelectList(Enum.GetValues(typeof(SelfEmployed))))
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="ApplicantIncome" class="control-label">Applicant Income</label>
+                                <input asp-for="ApplicantIncome" class="form-control" value="0"/>
+                                <span asp-validation-for="ApplicantIncome" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="IncomeContinuation" class="control-label">Income Continuation</label>
+                                @Html.DropDownListFor(m => m.IncomeContinuation,
+                                new SelectList(Enum.GetValues(typeof(YN))))
+                            </div>
+                        </div>
+                        <!-- /col -->
+                       
+                        
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="CoapplicantIncome" class="control-label">Coapplicant Income</label>
+                                <input asp-for="CoapplicantIncome" class="form-control" value="0"/>
+                                <span asp-validation-for="CoapplicantIncome" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="FinanceAmount" class="control-label">Loan Amount</label>
+                                <input asp-for="FinanceAmount" class="form-control" value="0"/>
+                                <span asp-validation-for="FinanceAmount" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="FinanceAmountTerm" class="control-label">Loan Term</label>
+                                <input asp-for="FinanceAmountTerm" class="form-control" value="0"/>
+                                <span asp-validation-for="FinanceAmountTerm" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        @*<div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Credit_History" class="control-label">Credit History</label>
+                                <input asp-for="Credit_History" class="form-control" />
+                                <span asp-validation-for="Credit_History" class="text-danger"></span>
+                            </div>
+                        </div>*@
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Credit_History" class="control-label">Credit History</label>
+                                @*@Html.DropDownListFor(m => m.Credit_History,
+                                new SelectList(Enum.GetValues(typeof(CH))))*@
+                                <select asp-for="Credit_History" class="form-control">
+                                    <option value="0">Bad</option>
+                                    <option value="1">Good</option>
+                                </select>
+                                <span asp-validation-for="Credit_History" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label asp-for="ReleaseDate" class="control-label">Request Date</label>
+                                <input asp-for="ReleaseDate" class="form-control"/>
+                                <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                       
+                        <!-- col -->
+                        <div class="col-lg-12">
+                            <div class="banner-form-btn">
+                                <button type="submit" class="btn btn-primary">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                    </div>
+                        
+                    <!-- /row -->
+                </form>
+            </div>
+        </div>
+        <!-- /Container -->
+    </div>
+</div>
+    <!-- /Loan Form -->
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

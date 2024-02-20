@@ -1,0 +1,51 @@
+﻿@model IEnumerable<FinalProjectUni.Models.SystemMangerPage>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Admin Links:</h3>
+<p>
+    <h5 style="text-decoration: underline;">
+    <a  asp-controller="MyUsers" asp-action="Index">1-Manage Clients</a>
+    </h5>
+</p>
+<p>
+    <h5 style="text-decoration: underline;">
+        <a asp-controller="Accounts" asp-action="Index">2-Manage Accounts</a>
+    </h5>
+</p>
+<p>
+    <h5 style="text-decoration: underline;">
+        <a asp-controller="AccountUsers" asp-action="Index">3-Manage Client Accounts</a>
+    </h5>
+</p>
+<p>
+    <h5 style="text-decoration: underline;">
+        <a asp-controller="Finances" asp-action="Index">4-Manage Loans</a>
+    </h5>
+</p>
+<p>
+    <h5 style="text-decoration: underline;">
+        <a asp-controller="MarketDashBs" asp-action="Index">5-Marketing Dashboard</a>
+    </h5>
+</p>
+@*<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@

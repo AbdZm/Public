@@ -1,0 +1,144 @@
+﻿@model FinalProjectUni.Models.Finance
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+    <h1>Details</h1>
+
+    <div>
+        <h4>Finance</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.MyUser)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.MyUser.Id)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SecretKey)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SecretKey)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Type)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Type)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Gender)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Gender)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Age)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Married)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Married)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Dependents)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Dependents)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Education)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Education)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SelfEmployed)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SelfEmployed)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ApplicantIncome)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ApplicantIncome)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IncomeContinuation)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IncomeContinuation)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IncomeRate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IncomeRate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IncomeRisk)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IncomeRisk)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CoapplicantIncome)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CoapplicantIncome)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.FinanceAmount)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FinanceAmount)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.FinanceAmountTerm)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FinanceAmountTerm)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Credit_History)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Credit_History)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Loan_Status)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Loan_Status)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ReleaseDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ReleaseDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Done)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Done)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.final_decision)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.final_decision)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>

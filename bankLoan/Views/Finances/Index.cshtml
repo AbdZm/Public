@@ -1,0 +1,92 @@
+﻿@model IEnumerable<FinalProjectUni.Models.Finance>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <h1>Loans</h1>
+
+    @*<p>
+        <a asp-action="Create">Create New</a>
+    </p>*@
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.MyUser)*@
+                    Client Id
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.MyUser)*@
+                    First Name
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.MyUser)*@
+                    Last Name
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                @*<th>
+            @Html.DisplayNameFor(model => model.ApplicantIncome)
+        </th>*@
+                <th>
+                    @*@Html.DisplayNameFor(model => model.Loan_Status)*@
+                    Loan Prediction
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.Done)*@
+                    Processed
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.Loan_Status)*@
+                    Approval
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.ReleaseDate)*@
+                    Date
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Reverse())
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MyUser.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MyUser.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MyUser.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                @*<td>
+            @Html.DisplayFor(modelItem => item.ApplicantIncome)
+        </td>*@
+                <td style="color:red;">
+                    @Html.DisplayFor(modelItem => item.Loan_Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Done)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.final_decision)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReleaseDate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit/Details</a> |
+                    @*<a asp-action="Details" asp-route-id="@item.Id">Details</a> |*@
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
